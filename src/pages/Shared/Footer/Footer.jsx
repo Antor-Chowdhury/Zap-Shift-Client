@@ -21,8 +21,8 @@ const Footer = () => {
   );
 
   return (
-    <div className="md:max-w-[95%] mx-auto">
-      <footer className="footer footer-horizontal bg-gray-900 footer-center  text-[#DADADA] px-6 py-10 md:p-10 md:rounded-4xl">
+    <div className="md:max-w-[90%] mx-auto pb-12.5">
+      <footer className="footer footer-horizontal bg-gray-900 footer-center  text-[#DADADA] px-5 py-10 md:p-10 md:rounded-4xl">
         <aside>
           <Logo></Logo>
           <p className="text-base">

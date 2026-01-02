@@ -39,7 +39,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="max-w-[80%] mx-auto mb-24.5">
+    <div className="max-w-[80%] mx-auto mb-14 md:mb-24.5">
       <h2 className="font-extrabold text-3xl mb-8 text-[#03373D]">
         How it Works
       </h2>

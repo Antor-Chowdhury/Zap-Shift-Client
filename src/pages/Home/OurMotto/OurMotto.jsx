@@ -6,7 +6,7 @@ import callSupport from "../../../assets/call-support-3.png";
 const OurMotto = () => {
   return (
     <div className="max-w-[80%] mx-auto mb-24.5">
-      <div className="border-dashed border-y-2 py-20 flex flex-col gap-6">
+      <div className="border-dashed border-y py-20 flex flex-col gap-6">
         {/* card 1 */}
         <div className="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl p-6 md:p-10 text-center md:text-left">
           {/* Image */}

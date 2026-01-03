@@ -11,7 +11,7 @@ import randstad from "../../../assets/brands/randstad.png";
 const Brands = () => {
   return (
     <div className="max-w-[80%] mx-auto mb-14 md:mb-24.5">
-      <h3 className="font-black md:font-extrabold text-lg md:text-3xl text-secondary text-center mb-10">
+      <h3 className="font-black md:font-extrabold text-lg md:text-4xl text-secondary text-center mb-10">
         We've helped thousands of sales teams
       </h3>
       <Marquee speed={100} autoFill={true}>

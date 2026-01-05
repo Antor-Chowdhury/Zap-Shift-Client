@@ -12,7 +12,7 @@ const Footer = () => {
   const links = (
     <>
       <Link to="#">Services</Link>
-      <Link to="#">Coverage</Link>
+      <Link to="/coverage">Coverage</Link>
       <Link to="#">About Us</Link>
       <Link to="#">Pricing</Link>
       <Link to="#">Blog</Link>

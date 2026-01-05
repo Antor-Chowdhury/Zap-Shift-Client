@@ -21,3 +21,13 @@ body {
   font-style: normal;
   background-color: #eaeced;
 }
+
+.nav-link {
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  font-weight: 700;
+  color: #606060;
+}

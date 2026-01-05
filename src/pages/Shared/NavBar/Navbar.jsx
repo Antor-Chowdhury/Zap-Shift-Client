@@ -1,16 +1,88 @@
 import React from "react";
 import Logo from "../../../components/Logo/Logo";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
     <>
-      <NavLink>Services</NavLink>
-      <NavLink>Coverage</NavLink>
-      <NavLink>About Us</NavLink>
-      <NavLink>Pricing</NavLink>
-      <NavLink>Blog</NavLink>
-      <NavLink>Contact</NavLink>
+      <NavLink
+        to="/services"
+        className={({ isActive }) =>
+          `nav-link font-medium 
+     ${
+       isActive
+         ? "active py-2.5 px-4.5 bg-primary rounded-full"
+         : "py-2.5 px-4.5 hover:bg-primary hover:rounded-3xl"
+     }`
+        }
+      >
+        Services
+      </NavLink>
+      <NavLink
+        to="/coverage"
+        className={({ isActive }) =>
+          `nav-link font-medium 
+     ${
+       isActive
+         ? "active py-2.5 px-4.5 bg-primary rounded-full"
+         : "py-2.5 px-4.5 hover:bg-primary hover:rounded-3xl"
+     }`
+        }
+      >
+        Coverage
+      </NavLink>
+      <NavLink
+        to="/about-us"
+        className={({ isActive }) =>
+          `nav-link font-medium  
+     ${
+       isActive
+         ? "active py-2.5 px-4.5 bg-primary rounded-full"
+         : "py-2.5 px-4.5 hover:bg-primary hover:rounded-3xl"
+     }`
+        }
+      >
+        About Us
+      </NavLink>
+      <NavLink
+        to="/pricing"
+        className={({ isActive }) =>
+          `nav-link font-medium 
+     ${
+       isActive
+         ? "active py-2.5 px-4.5 bg-primary rounded-full"
+         : "py-2.5 px-4.5 hover:bg-primary hover:rounded-3xl"
+     }`
+        }
+      >
+        Pricing
+      </NavLink>
+      <NavLink
+        to="blog"
+        className={({ isActive }) =>
+          `nav-link font-medium  
+     ${
+       isActive
+         ? "active py-2.5 px-4.5 bg-primary rounded-full"
+         : "py-2.5 px-4.5 hover:bg-primary hover:rounded-3xl"
+     }`
+        }
+      >
+        Blog
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          `nav-link font-medium 
+     ${
+       isActive
+         ? "active py-2.5 px-4.5 bg-primary rounded-full"
+         : "py-2.5 px-4.5 hover:bg-primary hover:rounded-3xl"
+     }`
+        }
+      >
+        Contact
+      </NavLink>
     </>
   );
 
@@ -43,9 +115,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a>
+          <Link to="/">
             <Logo></Logo>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-primary-content font-medium text-base gap-9">

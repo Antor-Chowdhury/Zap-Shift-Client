@@ -7,11 +7,13 @@ import Story from "../pages/About_Us/Story/Story";
 import Mission from "../pages/About_Us/Mission/Mission";
 import Success from "../pages/About_Us/Success/Success";
 import Team from "../pages/About_Us/Team/Team";
+import Error from "../pages/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
+    errorElement: <RootLayout></RootLayout>, // global error handler
     children: [
       {
         index: true,

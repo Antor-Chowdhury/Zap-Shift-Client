@@ -14,7 +14,7 @@ const AuthLayout = () => {
         </div>
 
         {/* Form Area */}
-        <div className="flex md:flex-1 items-center justify-center lg:justify-start lg:ml-20">
+        <div className="flex md:flex-1 items-center justify-center lg:justify-start lg:ml-35">
           <div className="w-full max-w-md">
             <Outlet />
           </div>

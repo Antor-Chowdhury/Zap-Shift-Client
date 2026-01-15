@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const Register = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   // using react form
   const {
     register,
@@ -65,12 +68,28 @@ const Register = () => {
         {/* Password */}
         <div>
           <label className="text-sm font-medium text-gray-700">Password</label>
-          <input
-            type="password"
-            {...register("password", { required: true, minLength: 6 })}
-            placeholder="Password"
-            className="w-full mt-1 px-3 sm:px-4 py-2.5 border rounded-lg focus:outline-none border-gray-400 text-sm sm:text-base"
-          />
+          <div className="relative">
+            <input
+              type={showPassword ? "text" : "password"} // toggle type
+              {...register("password", {
+                required: true,
+                minLength: 6,
+                pattern:
+                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/,
+              })}
+              placeholder="Password"
+              className="w-full mt-1 px-3 sm:px-4 py-2.5 border rounded-lg focus:outline-none border-gray-400 text-sm sm:text-base pr-10"
+            />
+
+            {/* Eye button */}
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-500"
+            >
+              {showPassword ? <FiEyeOff /> : <FiEye />}
+            </button>
+          </div>
 
           {/* error handling */}
           {errors.password?.type === "required" && (
@@ -79,6 +98,12 @@ const Register = () => {
           {errors.password?.type === "minLength" && (
             <p className="text-red-500 text-sm">
               Password must be at least 6 characters long
+            </p>
+          )}
+          {errors.password?.type === "pattern" && (
+            <p className="text-red-500 text-sm">
+              Password must be at least 8 characters, include uppercase,
+              lowercase, number, and special character
             </p>
           )}
         </div>

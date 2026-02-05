@@ -102,7 +102,7 @@ const Register = () => {
           )}
           {errors.password?.type === "pattern" && (
             <p className="text-red-500 text-sm">
-              Password must be at least 8 characters, include uppercase,
+              Password must be at least 6 characters, include uppercase,
               lowercase, number, and special character
             </p>
           )}
